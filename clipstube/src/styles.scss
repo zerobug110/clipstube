@@ -48,6 +48,11 @@ html {
     text-decoration: none;
 }
 
+.app-icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
 
 .container {
   display: grid;
@@ -56,10 +61,3 @@ html {
   position: relative;
 
 }
-
-.app-icon {
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-}
-

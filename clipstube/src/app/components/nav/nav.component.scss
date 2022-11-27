@@ -1,0 +1,45 @@
+.header {
+  // // background-color: blue;
+  // grid-column: full-start / col-start 1;
+
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    padding: 0 2rem;
+    height: 7rem;
+
+
+    &--logo {
+      font-size: 2rem;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: black;
+      cursor: pointer;
+    }
+
+    &--list {
+      .nav-item {
+        font-size: 1.6rem;
+        list-style: none;
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        &__link {
+
+          .link {
+            text-decoration: none;
+            color: black;
+
+          }
+        }
+      }
+    }
+  }
+}
