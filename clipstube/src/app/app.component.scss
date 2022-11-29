@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 14rem))[col-end] 1fr  5rem[full-end];
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   position: relative;
 
 }
@@ -12,10 +12,9 @@
 }
 
 .hero-video {
-  grid-column: col-start 1 / col-end;
+  grid-column: full-start / full-end;
   width: 100%;
-  padding: 2rem;
-  background-color: red;
+
 
 }
 
