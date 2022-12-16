@@ -1,8 +1,5 @@
 .modal {
 
-  .content {
-    background-color: red;
-  }
 
   &__overlay {
     background-color: rgba(0,0,0, .9);
@@ -22,9 +19,21 @@
     padding: 2rem;
 
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
+  &__close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+
 }
+
+.hidden {
+  display: none;
+}
+
+

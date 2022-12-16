@@ -1,4 +1,5 @@
-<div class="modal">
+<div class="modal" [ngClass]="{hidden: !modal.isModalOpen()}">
+
   <div class="content">
     <!-- Modal BG Overlay -->
     <div class="modal__overlay">
@@ -17,7 +18,7 @@
           <ng-content select="selector"></ng-content>
 
           <!-- Modal Close Button -->
-          <div class="modal-close cursor-pointer z-50">
+          <div class="modal__close-btn" (click)="closeModal()">
             &#x2715;
           </div>
         </div>
