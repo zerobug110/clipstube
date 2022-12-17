@@ -15,8 +15,5 @@ import { ModalService } from '../services/modal.service';
   exports: [
     ModalComponent
   ],
-  providers: [
-    ModalService
-  ]
 })
 export class SharedModule { }

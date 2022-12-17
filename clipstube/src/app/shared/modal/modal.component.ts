@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
@@ -7,8 +7,8 @@ import { ModalService } from 'src/app/services/modal.service';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  @Input() modalID = ''
 
-  blueClass = false
   constructor(public modal: ModalService ) {
     // console.log(this.modal.visible)
   }
