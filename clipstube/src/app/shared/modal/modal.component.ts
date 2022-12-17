@@ -17,7 +17,7 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal() {
-    this.modal.toggleModal()
+    this.modal.toggleModal(this.modalID)
     console.log("close")
   }
 }
