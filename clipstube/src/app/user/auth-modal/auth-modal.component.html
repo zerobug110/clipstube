@@ -1,82 +1,84 @@
 <app-modal modalID="auth">
   <p class="modal-header" hidding>Your Account</p>
     <!-- Tabs -->
-  <ul class="auth-login">
-    <li class="modal-header__text">
-      <a class="block rounded py-3 px-4 transition hover:text-white text-white
-        bg-indigo-400" href="#">Login</a>
-    </li>
-    <li class="modal-header__text">
-      <a class="block rounded py-3 px-4 transition hover:text-indigo-400"
-        href="#">Register</a>
-    </li>
-  </ul>
+    <ng-content select="tabs"></ng-content>
+    <app-tabs-container>
+      <app-tabs>
+          <!-- Login Form -->
+        <form class="form">
+          <!-- Email -->
+          <div class="">
+            <label class="inline-block mb-2">Email</label>
+            <input type="email"
+              class="form__input"
+              placeholder="Enter Email" />
+          </div>
+          <!-- Password -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Password</label>
+            <input type="password"
+              class="form__input" />
+          </div>
+          <button type="submit"
+            class="form__submit-btn">
+            Submit
+          </button>
+        </form>
+      </app-tabs>
 
-  <!-- Login Form -->
-  <form class="form">
-    <!-- Email -->
-    <div class="">
-      <label class="inline-block mb-2">Email</label>
-      <input type="email"
-        class="form__input"
-        placeholder="Enter Email" />
-    </div>
-    <!-- Password -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Password</label>
-      <input type="password"
-        class="form__input" />
-    </div>
-    <button type="submit"
-      class="form__submit-btn">
-      Submit
-    </button>
-  </form>
-  <!-- Registration Form -->
-  <form class="form">
-    <!-- Name -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Name</label>
-      <input type="text"
-        class="form__input" />
-    </div>
-    <!-- Email -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Email</label>
-      <input type="email"
-        class="form__input"
-        placeholder="Enter Email" />
-    </div>
-    <!-- Age -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Age</label>
-      <input type="number"
-        class="form__input" />
-    </div>
-    <!-- Password -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Password</label>
-      <input type="password"
-        class="form__input"
-        placeholder="Password" />
-    </div>
-    <!-- Confirm Password -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Confirm Password</label>
-      <input type="password"
-        class="form__input"
-        placeholder="Confirm Password" />
-    </div>
-    <!-- Phone Number -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Phone Number</label>
-      <input type="text"
-        class="form__input"
-        placeholder="Enter Phone Number" />
-    </div>
-    <button type="submit"
-      class="form__submit-btn">
-      Submit
-    </button>
-  </form>
+      <app-tabs>
+            <!-- Registration Form -->
+        <form class="form">
+          <!-- Name -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Name</label>
+            <input type="text"
+              class="form__input" />
+          </div>
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Email</label>
+            <input type="email"
+              class="form__input"
+              placeholder="Enter Email" />
+          </div>
+          <!-- Age -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Age</label>
+            <input type="number"
+              class="form__input" />
+          </div>
+          <!-- Password -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Password</label>
+            <input type="password"
+              class="form__input"
+              placeholder="Password" />
+          </div>
+          <!-- Confirm Password -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Confirm Password</label>
+            <input type="password"
+              class="form__input"
+              placeholder="Confirm Password" />
+          </div>
+          <!-- Phone Number -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Phone Number</label>
+            <input type="text"
+              class="form__input"
+              placeholder="Enter Phone Number" />
+          </div>
+          <button type="submit"
+            class="form__submit-btn">
+            Submit
+          </button>
+        </form>
+      </app-tabs>
+    </app-tabs-container>
+
+
+
+
+
 </app-modal>

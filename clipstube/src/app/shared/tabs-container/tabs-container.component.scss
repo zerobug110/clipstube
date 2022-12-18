@@ -1,0 +1,23 @@
+.modal-header {
+  font-size: 1.6rem;
+
+  display: flex;
+
+
+  &__text {
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: blue;
+      padding: .5rem 1rem;
+      border-radius: .1rem;
+
+    }
+
+  }
+}
