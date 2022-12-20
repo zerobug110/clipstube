@@ -1,11 +1,7 @@
 <ul class="auth-login" tabs>
-  <li class="modal-header__text">
+  <li *ngFor="let tab of tabs" class="modal-header__text">
     <a class="block rounded py-3 px-4 transition hover:text-white text-white
       bg-indigo-400" href="#">Login</a>a
-  </li>
-  <li class="modal-header__text">
-    <a class="block rounded py-3 px-4 transition hover:text-indigo-400"
-      href="#">Register</a>
   </li>
 </ul>
 

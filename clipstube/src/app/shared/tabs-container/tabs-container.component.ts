@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { TabsComponent } from '../tabs/tabs.component';
+import { Component, AfterContentInit, ContentChild, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-tabs-container',
   templateUrl: './tabs-container.component.html',
   styleUrls: ['./tabs-container.component.scss']
 })
-export class TabsContainerComponent implements OnInit {
+export class TabsContainerComponent implements AfterContentInit {
+  @ContentChild(TabsComponent) tabs?: QueryList<TabsComponent>
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngAfterContentInit(): void {
+   this.tabs?.map()
   }
 
 }
