@@ -1,0 +1,59 @@
+<form class="form" [formGroup]="registerForm">
+  <!-- Name -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Name</label>
+    <input type="text" class="form__input" formControlName="name"/>
+    <p *ngIf="registerForm.controls.name.touched &&
+              registerForm.controls.name.dirty &&
+              registerForm.controls.name.errors?.['required']">
+      field is required
+    </p>
+    <p *ngIf="registerForm.controls.name.errors?.['minlength'] &&
+              registerForm.controls.name.touched &&
+              registerForm.controls.name.dirty ">
+      the value you inputted is
+      {{registerForm.controls.name.errors?.['minlength'].actualLength}}
+      blank characters long.
+      it must be at least
+      {{registerForm.controls.name.errors?.['minlength'].requiredLength}
+    </p>
+  </div>
+  <!-- Email -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Email</label>
+    <input type="email"
+      class="form__input"
+      placeholder="Enter Email" />
+  </div>
+  <!-- Age -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Age</label>
+    <input type="number"
+      class="form__input" />
+  </div>
+  <!-- Password -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Password</label>
+    <input type="password"
+      class="form__input"
+      placeholder="Password" />
+  </div>
+  <!-- Confirm Password -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Confirm Password</label>
+    <input type="password"
+      class="form__input"
+      placeholder="Confirm Password" />
+  </div>
+  <!-- Phone Number -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Phone Number</label>
+    <input type="text"
+      class="form__input"
+      placeholder="Enter Phone Number" />
+  </div>
+  <button type="submit"
+    class="form__submit-btn">
+    Submit
+  </button>
+</form>

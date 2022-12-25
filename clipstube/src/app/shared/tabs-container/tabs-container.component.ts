@@ -10,7 +10,8 @@ export class TabsContainerComponent implements AfterContentInit {
   @ContentChild(TabsComponent) tabs?: QueryList<TabsComponent>
 
   ngAfterContentInit(): void {
-   this.tabs?.map()
+  //  this.tabs?.map()
+  console.log(this.tabs)
   }
 
 }
