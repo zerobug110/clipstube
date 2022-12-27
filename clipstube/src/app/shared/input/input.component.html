@@ -1,0 +1,26 @@
+<div class="mb-3">
+  <label class="inline-block mb-2">Name</label>
+  <input [formControl]="control" [type]="type" class="form__input" [placeholder]=" placeholder" formControlName="name"/>
+  <ng-container *ngIf="control.touched && control.dirty" >
+    <p *ngIf="
+            control.errors?.['required']">
+      field is required
+    </p>
+    <p *ngIf="control.errors?.['minlength']">
+      the value you inputted is
+      {{control.errors?.['minlength'].actualLength}}
+      blank characters long.
+      it must be at least
+      {{control.errors?.['minlength'].requiredLength}}
+    </p>
+    <p *ngIf="control.errors?.['email']">
+      you must enter a valid email.
+    </p>
+    <p *ngIf="control.errors?.['min']">
+      value too low
+    </p>
+    <p *ngIf="control.errors?.['max']">
+      value too high
+    </p>
+  </ng-container>
+</div>

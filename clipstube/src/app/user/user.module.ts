@@ -17,7 +17,7 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     CommonModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     AuthModalComponent,
