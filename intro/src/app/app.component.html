@@ -1,5 +1,26 @@
 <main class="main">
-  <app-card [title]="post.title"></app-card>
+  <header class="page-header">
+    <p class="eyebrow">The Dev Journal</p>
+    <h1>Latest <em>Articles</em></h1>
+    <div class="header-rule"></div>
+  </header>
+
+  <ul class="blog-grid">
+    <!-- {{
+      title | uppercase
+    }}
+    {{
+      today | date
+    }} -->
+
+    {{
+      data
+    }}
+    <li *ngFor="let blog of blogList; let i = index">
+      <!-- {{ i }} -->
+      <course-card></course-card>
+    </li>
+  </ul>
 </main>
 
 <router-outlet />

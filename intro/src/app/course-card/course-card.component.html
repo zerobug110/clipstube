@@ -1,0 +1,57 @@
+<article class="blog-card">
+  <div class="card-cover">
+    <img [src]="imageUrl" alt="angular image" />
+    <span class="card-category"></span>
+    <span class="card-number">#1</span>
+  </div>
+
+  <div class="card-body">
+    <div class="card-meta">
+      <time>17-2-26</time>
+      <span class="dot"></span>
+      <span>5 mins</span>
+    </div>
+
+    <span class="card-title">Getting Started with Angular</span>
+
+    <hr class="card-divider" />
+
+    <p class="card-excerpt">
+      A beginner-friendly guide to setting up and running your first Angular
+      project.
+    </p>
+
+    <div class="card-tags">
+      <span class="tag">Java</span>
+    </div>
+  </div>
+
+  <footer *ngIf="isLoggedIn" class="card-footer">
+    <div class="author-info">
+      <div class="author-avatar">MB</div>
+      <span class="author-name">Muhammed Bojang</span>
+    </div>
+    <!-- <a [routerLink]="['/blog', post.slug]" class="read-link"> -->
+    Read
+    <button (click)="incrementCounter()" [disabled]="isDisable">
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 12 12"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M2 6h8M7 3l3 3-3 3"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <div>{{ counter }}</div>
+    </button>
+
+    <!-- </a> -->
+  </footer>
+</article>

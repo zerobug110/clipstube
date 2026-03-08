@@ -11,7 +11,7 @@ export interface IBlogPost {
   coverImage: string;
 }
 
-export const Blog: IBlogPost[] = [
+export const blogs: IBlogPost[] = [
   {
     id: 1,
     title: 'Getting Started with Angular',

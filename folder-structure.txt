@@ -1,0 +1,62 @@
+src/
+│
+├── app/
+│   │
+│   ├── core/                    # Singleton services (loaded once)
+│   │   ├── guards/
+│   │   ├── interceptors/
+│   │   ├── services/
+│   │   ├── models/
+│   │   └── core.module.ts
+│   │
+│   ├── shared/                  # Reusable UI + utilities
+│   │   ├── components/
+│   │   ├── directives/
+│   │   ├── pipes/
+│   │   ├── utils/
+│   │   └── shared.module.ts
+│   │
+│   ├── features/                # Feature modules (main business logic)
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── pages/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   ├── models/
+│   │   │   ├── auth-routing.module.ts
+│   │   │   └── auth.module.ts
+│   │   │
+│   │   ├── dashboard/
+│   │   │   ├── pages/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   ├── models/
+│   │   │   ├── dashboard-routing.module.ts
+│   │   │   └── dashboard.module.ts
+│   │   │
+│   │   ├── users/
+│   │   │   ├── pages/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   ├── models/
+│   │   │   ├── store/           # NgRx (if used)
+│   │   │   ├── users-routing.module.ts
+│   │   │   └── users.module.ts
+│   │   │
+│   │   └── settings/
+│   │       ├── pages/
+│   │       ├── components/
+│   │       ├── services/
+│   │       ├── settings-routing.module.ts
+│   │       └── settings.module.ts
+│   │
+│   ├── layout/                  # App shell
+│   │   ├── components/
+│   │   └── layout.module.ts
+│   │
+│   ├── app-routing.module.ts
+│   └── app.module.ts
+│
+├── assets/
+├── environments/
+└── styles/
